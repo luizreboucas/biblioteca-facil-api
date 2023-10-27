@@ -3,6 +3,7 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -14,7 +15,7 @@ public class DemoApplication {
 	}
 
 	@GetMapping("/user")
-	public String greeting(){
-		return "Hello World";
+	public String greeting(@RequestParam(value = "name") String name){
+		return "Hello " + name;
 	}
 }

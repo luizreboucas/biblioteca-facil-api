@@ -14,8 +14,5 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@GetMapping("/user")
-	public String greeting(@RequestParam(value = "name") String name){
-		return "Hello " + name;
-	}
+
 }
